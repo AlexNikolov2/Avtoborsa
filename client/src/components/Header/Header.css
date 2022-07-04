@@ -2,12 +2,14 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: rgb(0, 81, 255);
 }
 ul{
     list-style: none;
     display: flex;
     flex-direction: row;
     float: right;
+    color: white;
 }
 li{
     text-decoration: none;
@@ -15,4 +17,8 @@ li{
 }
 h1{
     margin: 20px;
+    color: white;
+}
+ul li a{
+    color: white;
 }
