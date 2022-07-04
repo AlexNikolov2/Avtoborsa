@@ -17,6 +17,7 @@ function Header(){
 }
                 {//<li><a href="/"><i class="fa-solid fa-right-from-bracket"></i>Log out</a></li>
 }
+                <li><a href="/"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
             </ul>
         </header>
     )
