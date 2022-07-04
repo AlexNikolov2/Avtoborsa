@@ -3,7 +3,7 @@ import './Header.css'
 
 function Header(){
     return(
-        <header>
+        <header className="">
             <section className="logo">
                 <h1>Avtoborsa</h1>
             </section>
