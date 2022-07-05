@@ -7,27 +7,27 @@ header{
     background-color: rgb(0, 81, 255);
     margin: 0 13rem;
 }
-ul{
+header ul{
     list-style: none;
     display: flex;
     flex-direction: row;
     float: right;
     color: white;
 }
-li{
+header li{
     text-decoration: none;
     margin: 15px;
 }
-h1{
+header h1{
     position: relative;
     top: 5px;
     margin: 20px;
     color: white;
 }
-ul li a{
+header ul li a{
     color: white;
     text-decoration: none;
 }
-i{
+header i{
     padding: 4px;
 }
