@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+
 .landing{
     display: flex;
     flex-direction: row;
@@ -15,7 +18,54 @@
 .landing .landing-up{
     color: white;
     position: absolute;
-    right: 37%;
+    right: 39%;
     top: 15%;
     font-size: 26px;
+}
+.landing .landing-center{
+    color: white;
+    position: absolute;
+    right: 39%;
+    top: 45%;
+    font-size: 48px;
+    font-family: 'Exo 2', sans-serif;
+}
+.landing .landing-bottom{
+    color: white;
+    position: absolute;
+    text-align: center;
+    right: 30%;
+    top: 57%;
+    font-size: 20px;
+}
+.landing ul{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: absolute;
+    text-align: center;
+    right: 33%;
+    top: 75%;
+}
+.landing li{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+.landing i{
+    font-size: 27px;
+    margin: 5px;
+}
+.landing a{
+    background-color: rgb(0, 81, 255);
+    color: white;
+    position: absolute;
+    text-align: center;
+    right: 45%;
+    top: 100%;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 10px;
 }
