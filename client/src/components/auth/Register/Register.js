@@ -1,6 +1,6 @@
 import React from 'react';
 import './Register.css';
-import background from '../../assets/auth-img.jpg'
+import background from '../../../assets/auth-img.jpg'
 
 export const Register = () =>{
     return(
@@ -9,9 +9,9 @@ export const Register = () =>{
             <section className="left">
                 <h1>Benefits of being a logged in user at Avtoborsa:</h1>
                 <ul>
-                    <li>You can like as many car listings as you want!</li>
-                    <li>You can list a car in our web app!</li>
-                    <li>And many more...</li>
+                    <li><i class="fa-solid fa-car-side"></i>You can like as many car listings as you want!</li>
+                    <li><i class="fa-solid fa-car-side"></i>You can list a car in our web app!</li>
+                    <li><i class="fa-solid fa-car-side"></i>And many more...</li>
                     <li className="special">Come on, fill up the form and sign up!</li>
                 </ul>
             </section>
