@@ -6,6 +6,7 @@ header{
     justify-content: space-between;
     background-color: rgb(0, 81, 255);
     margin: 0 13rem;
+    box-shadow: 0px 0px 18px 0 rgb(21, 0, 143), 0px 6px 20px 0 rgb(4, 4, 4);
 }
 header ul{
     list-style: none;
