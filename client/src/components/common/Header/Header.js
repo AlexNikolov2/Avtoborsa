@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 
-function Header(){
+export const Header = () => {
     return(
         <header className="">
             <section className="logo">
@@ -22,5 +22,3 @@ function Header(){
         </header>
     )
 }
-
-export default Header;

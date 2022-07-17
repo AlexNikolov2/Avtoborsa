@@ -2,7 +2,7 @@ import React from 'react';
 import './LandingPage.css';
 import landing from '../../../assets/landing-1.jpg';
 
-function LandingPage(){
+export const LandingPage = () => {
     return(
         <section className="landing">
             <img src={landing} alt=""/>
@@ -18,5 +18,3 @@ function LandingPage(){
         </section>
     )
 }
-
-export default LandingPage;
