@@ -10,10 +10,10 @@ Nowadays it's not easy to find the car you want. Thousands of car brands, each w
 **Built with:**
 
 ![react](https://img.icons8.com/office/100/000000/react.png)
-![javascript](https://img.icons8.com/color/48/000000/javascript--v1.png)
-![firebase](https://img.icons8.com/color/48/000000/firebase.png)
-![html](https://img.icons8.com/color/48/000000/html-5--v1.png)
-![css](https://img.icons8.com/color/48/000000/css3.png)
+![javascript](https://img.icons8.com/color/100/000000/javascript--v1.png)
+![firebase](https://img.icons8.com/color/100/000000/firebase.png)
+![html](https://img.icons8.com/color/100/000000/html-5--v1.png)
+![css](https://img.icons8.com/color/100/000000/css3.png)
 
 **THE BIGGEST EVER SPECIAL OPERATION!**
 
