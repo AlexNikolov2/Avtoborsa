@@ -7,8 +7,8 @@ export const CatalogParticle = () => {
             <h3>Chevrolet Chevron 1.6 TDI</h3>
             <img src={image} alt="" />
             <p className="year"><b>Year: </b>2006</p>
-            <p className="price"><b>Price: </b>215000</p>
+            <p className="price"><b>Price: </b>215000 $</p>
             <a href="/">Details</a>
         </section>
     )
-}
+};
