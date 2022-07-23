@@ -12,6 +12,10 @@ export const Catalog = () => {
             <CatalogParticle/>
             <CatalogParticle/>
             <CatalogParticle/>
+            <CatalogParticle/>
+            <CatalogParticle/>
+            <CatalogParticle/>
+            <CatalogParticle/>
             </div>
             
         </section>
