@@ -4,7 +4,7 @@ import image from '../../../assets/car-test.jpg';
 export const CatalogParticle = () => {
     return(
         <section className="car">
-            <h3>Chevrolet</h3>
+            <h3>Chevrolet Chevron 1.6 TDI</h3>
             <img src={image} alt="" />
             <p className="year"><b>Year: </b>2006</p>
             <p className="price"><b>Price: </b>215000</p>
