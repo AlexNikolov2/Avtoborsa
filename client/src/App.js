@@ -3,7 +3,7 @@ import {Header} from './components/common/Header/Header';
 import {Footer} from './components/common/Footer/Footer';
 //import { CreateListing } from './components/crud/CreateListing/CreateListing';
 //import {LandingPage} from './components/common/LandingPage/LandingPage';
-//import { Catalog } from './components/catalog/Catalog';
+import { Catalog } from './components/catalog/Catalog';
 import { Profile } from './components/auth/Profile/Profile';
 //import {EditListing } from './components/crud/EditListing/EditListing'
 //import { Login } from './components/auth/Login/Login';
