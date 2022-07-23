@@ -25,3 +25,9 @@
     padding: 0.5rem;
     border-radius: 10px;
 }
+.car p{
+    color: black;
+}
+.car h3, b{
+    color: black;
+}

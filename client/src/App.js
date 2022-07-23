@@ -1,19 +1,29 @@
 import './App.css';
 import {Header} from './components/common/Header/Header';
 import {Footer} from './components/common/Footer/Footer';
-//import { CreateListing } from './components/crud/CreateListing/CreateListing';
-//import {LandingPage} from './components/common/LandingPage/LandingPage';
+import {LandingPage} from './components/common/LandingPage/LandingPage';
 import { Catalog } from './components/catalog/Catalog';
 import { Profile } from './components/auth/Profile/Profile';
-//import {EditListing } from './components/crud/EditListing/EditListing'
-//import { Login } from './components/auth/Login/Login';
-//import { Register } from './components/auth/Register/Register';
+import {EditListing } from './components/crud/EditListing/EditListing'
+import { Login } from './components/auth/Login/Login';
+import { Register } from './components/auth/Register/Register';
+import {Routes, Route} from 'react-router-dom';
+import { CreateListing } from './components/crud/CreateListing/CreateListing';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Profile/>
+      <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/create" element={<CreateListing/>}/>
+        <Route path="/edit" element={<EditListing/>}/>
+        <Route path="/home" element={<Catalog/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+      </Routes>
+      
       <Footer/>
     </div>
   );
