@@ -6,9 +6,9 @@ export const CatalogParticle = () => {
         <section className="car">
             <h3>Chevrolet</h3>
             <img src={image} alt="" />
-            <p className="year">2006</p>
-            <p className="price">215000</p>
-            <p className="description"></p>
+            <p className="year"><b>Year: </b>2006</p>
+            <p className="price"><b>Price: </b>215000</p>
+            <a href="/">Details</a>
         </section>
     )
 }
