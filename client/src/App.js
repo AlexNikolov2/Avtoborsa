@@ -9,6 +9,7 @@ import { Login } from './components/auth/Login/Login';
 import { Register } from './components/auth/Register/Register';
 import {Routes, Route} from 'react-router-dom';
 import { CreateListing } from './components/crud/CreateListing/CreateListing';
+import { DetailsListing } from './components/crud/DetailsListing/DetailsListing';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/home" element={<Catalog/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/profile" element={<Profile/>}/>
+        <Route path="/details" element={<DetailsListing/>}/>
       </Routes>
       
       <Footer/>
