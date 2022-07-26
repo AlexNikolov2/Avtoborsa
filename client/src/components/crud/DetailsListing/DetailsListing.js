@@ -24,6 +24,10 @@ export const DetailsListing = () => {
           deserunt quasi aut ipsum quidem, eligendi voluptas facere nemo culpa
           sequi hic.
         </p>
+        <div className="buttons">
+            <button id="edit">Edit</button>
+            <button id="delete">Delete</button>
+        </div>
       </div>
     </section>
   );
