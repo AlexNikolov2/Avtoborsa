@@ -10,6 +10,7 @@ import { Register } from './components/auth/Register/Register';
 import {Routes, Route} from 'react-router-dom';
 import { CreateListing } from './components/crud/CreateListing/CreateListing';
 import { DetailsListing } from './components/crud/DetailsListing/DetailsListing';
+import {Search} from './components/search/Search';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/details" element={<DetailsListing/>}/>
+        <Route path="/search" element={<Search/>}/>
       </Routes>
       
       <Footer/>

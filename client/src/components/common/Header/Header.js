@@ -15,7 +15,7 @@ export const Header = () => {
                 <li><Link to="/create"><i class="fa-solid fa-square-plus"></i>Create</Link></li>
                 <li><Link to="/profile"><i class="fa-solid fa-address-card"></i>Profile</Link></li>
                 <li><Link to="/"><i class="fa-solid fa-right-from-bracket"></i>Log out</Link></li>
-                <li><Link to="/"><i class="fa-solid fa-magnifying-glass"></i>Search</Link></li>
+                <li><Link to="/search"><i class="fa-solid fa-magnifying-glass"></i>Search</Link></li>
             </ul>
         </header>
     )

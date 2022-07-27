@@ -1,5 +1,6 @@
 import './CatalogParticle.css';
 import image from '../../../assets/car-test.jpg';
+import { Link } from 'react-router-dom';
 
 export const CatalogParticle = () => {
     return(
@@ -8,7 +9,7 @@ export const CatalogParticle = () => {
             <img src={image} alt="" />
             <p className="year"><b>Year: </b>2006</p>
             <p className="price"><b>Price: </b>215000 $</p>
-            <a href="/">Details</a>
+            <Link to="/details">Details</Link>
         </section>
     )
 };
