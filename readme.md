@@ -6,19 +6,8 @@
 
 Nowadays it's not easy to find the car you want. Thousands of car brands, each with its own pros and cons. Not only this, but there are so many different autohouses around the country, which makes it even harder to find the car you want. That is the reason why Avtoborsa exists - to help you find the car you want.
 
-# Currently designing the app:
+# Currently dynamizing the app:
 
-* [x] Header
-* [x] Footer
-* [x] Landing Page
-* [x] Create Listing
-* [x] Edit Listing
-* [x] Login
-* [x] Register
-* [x] Catalog
-* [x] Personal Profile
-* [x] Search
-* [x] Details
 # About the site:
 
 **Built with:**
