@@ -36,7 +36,7 @@ export const Register = () =>{
            .then(() => {
               let currUser = firebase.auth().currentUser;
 
-              firebase.firestore().collection("Users").add(currUser);
+              firebase.app.firestore().collection('Users').add(currUser);
   
               currUser
               .then(
