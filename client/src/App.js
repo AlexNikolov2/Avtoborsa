@@ -21,7 +21,7 @@ import UserContext from "./contexts/UserContext";
 
 function App() {
   const [user, setUser] = useState({});
-  const [newUser, setNewUser] = useState(false);
+  const [newUser] = useState(false);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged(setUser);
