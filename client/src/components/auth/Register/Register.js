@@ -1,8 +1,14 @@
 import React from 'react';
 import './Register.css';
 import background from '../../../assets/auth-img.jpg'
+//import { useContext, useState } from 'react';
+
+//import UserContext from '../../../contexts/UserContext';
 
 export const Register = () =>{
+    //const user = useContext(UserContext);
+    //const [errors, setErrors] = useState([]);
+
     return(
         <section className="register">
             <img src={background} alt="" />
@@ -15,17 +21,17 @@ export const Register = () =>{
                     <li className="special">Come on, fill up the form and sign up!</li>
                 </ul>
             </section>
-            <form action="">
+            <form>
                 <h1>Sign up</h1>
                 <div className="email">
                     <label htmlFor="email">Email</label>
-                    <input type="text" placeholder="Your email here"/>
+                    <input type="text" name="email" placeholder="Your email here"/>
                 </div>
                 <div className="password">
                     <label htmlFor="password">Password</label>
-                    <input type="password" placeholder="Your password here"/>
+                    <input type="password" name="password" placeholder="Your password here"/>
                 </div>
-                <button type='submit'>Sign up!</button>
+                <button class="button" type='submit'>Sign up!</button>
             </form>
         </section>
     )
