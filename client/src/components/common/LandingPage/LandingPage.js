@@ -1,6 +1,7 @@
 import React from 'react';
 import './LandingPage.css';
 import landing from '../../../assets/landing-1.jpg';
+import { Link } from 'react-router-dom';
 
 export const LandingPage = () => {
     return(
@@ -14,7 +15,7 @@ export const LandingPage = () => {
                 <li><i class="fa-solid fa-clock"></i>Time Effecient</li>
                 <li><i class="fa-solid fa-universal-access"></i>Easily accessible</li>
             </ul>
-            <a href="/">Find your car now <i class="fa-solid fa-magnifying-glass"></i></a>
+            <Link to="/search">Find your car now <i class="fa-solid fa-magnifying-glass"></i></Link>
         </section>
     )
 }
