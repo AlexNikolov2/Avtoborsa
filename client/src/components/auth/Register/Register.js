@@ -30,19 +30,18 @@ export const Register = () =>{
            return;
         }
   
+        
         firebase
            .auth()
            .createUserWithEmailAndPassword(email, password)
            .then(() => {
               let currUser = firebase.auth().currentUser;
-
-              firebase.app.firestore().collection('Users').add(currUser);
+              firebase.firestore.collection('Users').doc(currUser.id).set();
+             
   
               currUser
-              .then(
-                firebase.firestore().collection("Users").add(currUser)
-              )
                  .then(() => {
+                    
                     firebase.firestore().collection("Listings").doc(email).set({ listings: [] });
                  });
            })
