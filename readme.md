@@ -17,7 +17,7 @@ Nowadays it's not easy to find the car you want. Thousands of car brands, each w
 * [x] Register
 * [x] Catalog
 * [x] Personal Profile
-* [ ] Search
+* [x] Search
 * [x] Details
 # About the site:
 
