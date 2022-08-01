@@ -41,6 +41,7 @@
     font-weight: bold;
 }
 .register input{
+    color: black;
     border:none;
     padding: 10px 0px;
     margin: 10px 30px;
@@ -112,4 +113,15 @@
 }
 .register i{
     padding: 5px;
+}
+.register article{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    max-width: 200px;
+    background-color: red;
+    color: white;
+    padding: 2px;
+    border: 2px solid darkred;
 }
