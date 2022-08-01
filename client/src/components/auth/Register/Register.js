@@ -15,9 +15,9 @@ export const Register = () =>{
             <section className="left">
                 <h1>Benefits of being a logged in user at Avtoborsa:</h1>
                 <ul>
-                    <li><i class="fa-solid fa-car-side"></i>You can like as many car listings as you want!</li>
-                    <li><i class="fa-solid fa-car-side"></i>You can list a car in our web app!</li>
-                    <li><i class="fa-solid fa-car-side"></i>And many more...</li>
+                    <li><i className="fa-solid fa-car-side"></i>You can like as many car listings as you want!</li>
+                    <li><i className="fa-solid fa-car-side"></i>You can list a car in our web app!</li>
+                    <li><i className="fa-solid fa-car-side"></i>And many more...</li>
                     <li className="special">Come on, fill up the form and sign up!</li>
                 </ul>
             </section>
@@ -31,7 +31,7 @@ export const Register = () =>{
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" placeholder="Your password here"/>
                 </div>
-                <button class="button" type='submit'>Sign up!</button>
+                <button className="button" type='submit'>Sign up!</button>
             </form>
         </section>
     )

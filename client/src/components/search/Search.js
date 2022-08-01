@@ -7,7 +7,7 @@ export const Search = () => {
     <section className="search">
       <h1>Search Page</h1>
       <form action="">
-        <input type="text" placeholder="Car name/model" class="model"/>
+        <input type="text" placeholder="Car name/model" className="model"/>
         <div className="group">
           <input type="number" placeholder="Price from" />
           <input type="number" placeholder="Price to" />
@@ -29,7 +29,7 @@ export const Search = () => {
             <label htmlFor="electricity">Electricity</label>
           </div>
         </fieldset>
-        <button>Search <i class="fa-solid fa-magnifying-glass"></i></button>
+        <button>Search <i className="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <article className="results">
         <CatalogParticle />

@@ -11,11 +11,11 @@ export const LandingPage = () => {
             <h1 className="landing-center">A V T O B O R S A</h1>
             <p className="landing-bottom">Avtoborsa is the place to find the car of your dreams. Find, buy and drive!</p>
             <ul>
-                <li><i class="fa-solid fa-car-side"></i>Lots of cars</li>
-                <li><i class="fa-solid fa-clock"></i>Time Effecient</li>
-                <li><i class="fa-solid fa-universal-access"></i>Easily accessible</li>
+                <li><i className="fa-solid fa-car-side"></i>Lots of cars</li>
+                <li><i className="fa-solid fa-clock"></i>Time Effecient</li>
+                <li><i className="fa-solid fa-universal-access"></i>Easily accessible</li>
             </ul>
-            <Link to="/search">Find your car now <i class="fa-solid fa-magnifying-glass"></i></Link>
+            <Link to="/search">Find your car now <i className="fa-solid fa-magnifying-glass"></i></Link>
         </section>
     )
 }
