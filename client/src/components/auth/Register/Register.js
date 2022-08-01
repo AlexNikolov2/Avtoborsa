@@ -16,12 +16,13 @@ export const Register = () =>{
   
         let email = e.target.email.value;
         let password = e.target.password.value;
-  
         let errs = [];
         let isValidEmail = /^[a-zA-Z0-9.-]{4,}@\w+\.com$/.test(email);
   
-        if (password.length < 6) errs.push("Your password should be at least 6 chars long!");
-        if (!isValidEmail) errs.push("Your email should be a valid .com email");
+        if (password && password.length < 6) errs.push("Your password should be at least 6 characters long!");
+        if (email && !isValidEmail) errs.push("Invalid email!");
+        if (!password) errs.push("You forgot to fill up password!")
+        if (!email) errs.push("You forgot to fill up email!")
   
         setErrors(errs);
   
@@ -34,8 +35,13 @@ export const Register = () =>{
            .createUserWithEmailAndPassword(email, password)
            .then(() => {
               let currUser = firebase.auth().currentUser;
+
+              firebase.firestore().collection("Users").
   
               currUser
+              .then(
+                firebase.firestore().collection("Users").add(currUser)
+              )
                  .then(() => {
                     firebase.firestore().collection("Listings").doc(email).set({ listings: [] });
                  });
