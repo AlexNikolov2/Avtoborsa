@@ -4,7 +4,7 @@ import background from "../../../assets/auth-img.jpg";
 import { useContext, useState } from "react";
 import UserContext from "../../../contexts/UserContext";
 import { Navigate } from "react-router-dom";
-import firebase from "../../../services/firebase";
+import firebase from "../../../config/firebase";
 
 export const Login = () => {
   const user = useContext(UserContext);
