@@ -2,7 +2,7 @@ import "./Catalog.css";
 import { CatalogParticle } from "./particle/CatalogParticle.js";
 import { useState, useEffect } from "react";
 import firebase from "../../config/firebase";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 export const Catalog = () => {
   const [products, setProducts] = useState([]);

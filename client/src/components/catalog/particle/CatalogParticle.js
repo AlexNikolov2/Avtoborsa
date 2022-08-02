@@ -1,5 +1,5 @@
 import './CatalogParticle.css';
-import image from '../../../assets/car-test.jpg';
+//import image from '../../../assets/car-test.jpg';
 import { Link } from 'react-router-dom';
 
 export const CatalogParticle = (item) => {
