@@ -17,7 +17,7 @@
 .create form{
     display: flex;
     position: absolute;
-    bottom: 8%;
+    bottom: 16%;
     left: 36%;
     width: 400px;
     flex-direction: column;
@@ -36,12 +36,6 @@
 .create #file{
     background-color: rgb(0, 81, 255);
     color: white;
-}
-.create input::file-selector-button{
-    border: none;
-    background-color: white;
-    color: rgb(0, 81, 255);
-    font-weight: bold;
 }
 .create button{
     border: none;
