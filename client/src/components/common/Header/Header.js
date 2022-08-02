@@ -3,10 +3,22 @@ import './Header.css'
 import {Link} from 'react-router-dom';
 import { useContext } from 'react';
 import UserContext from '../../../contexts/UserContext'
-import {onLogout} from '../../'
+import clearUserData from '../../../services/authService'
+import firebase from '../../../config/firebase';
 
 export const Header = () => {
     const user = useContext(UserContext);
+    const onLogout = () => {
+        firebase
+            .auth()
+            .signOut()
+            .then((response) => {
+                clearUserData();
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
 
     return(
         <header className="">
@@ -21,7 +33,7 @@ export const Header = () => {
                     <>
                         <li><Link to="/create"><i className="fa-solid fa-square-plus"></i>Create</Link></li>
                         <li><Link to="/profile"><i className="fa-solid fa-address-card"></i>Profile</Link></li>
-                        <li><Link to="/"><i className="fa-solid fa-right-from-bracket"></i>Log out</Link></li>
+                        <li onClick={onLogout}><Link to="/"><i className="fa-solid fa-right-from-bracket"></i>Log out</Link></li>
                     </>
                 }
                 {

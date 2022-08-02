@@ -23,7 +23,6 @@ export const Login = () => {
         if (err.code === "auth/user-not-found")
           setError("There is no account corresponding to this email");
         if (err.code === "auth/wrong-password") setError("Wrong password");
-        console.log(err);
       });
   };
 
@@ -40,11 +39,11 @@ export const Login = () => {
           <h1>Log In</h1>
           <div className="email">
             <label htmlFor="email">Email</label>
-            <input type="text" placeholder="Your email here" />
+            <input type="text" name="email" placeholder="Your email here" />
           </div>
           <div className="password">
             <label htmlFor="password">Password</label>
-            <input type="password" placeholder="Your password here" />
+            <input type="password" name="password" placeholder="Your password here" />
           </div>
           <button type="submit">Log in!</button>
         </form>

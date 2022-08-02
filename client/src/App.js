@@ -12,7 +12,7 @@ import { CreateListing } from "./components/crud/CreateListing/CreateListing";
 import { DetailsListing } from "./components/crud/DetailsListing/DetailsListing";
 import { Search } from "./components/search/Search";
 
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import firebase from "./config/firebase";

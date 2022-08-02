@@ -46,9 +46,11 @@ export const Register = () => {
           .set({ id, email, listings })
           .then(this.checkStatus({ user }));
       })
-      .catch((err) => {
-        setErrors([err.message]);
-      });
+        .catch((err) => {
+            setErrors([err.message]);
+          });
+    
+    
   };
 
   if (user) {
