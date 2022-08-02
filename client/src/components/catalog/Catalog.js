@@ -44,16 +44,6 @@ export const Catalog = () => {
               item={product.info}
             />
             )
-            /*return(
-              <section className="car">
-                  <h3>{product.info.name}</h3>
-                  <img src={product.info.image} alt="" />
-                  <p className="year"><b>Year: </b>{product.info.year}</p>
-                  <p className="price"><b>Price: </b>{product.info.price} $</p>
-                  <Link to={`/details`}>Details</Link>
-              </section>
-              
-          )*/
           })
         ) : (
           <p>No listings yet</p>
