@@ -8,7 +8,7 @@ Nowadays it's not easy to find the car you want. Thousands of car brands, each w
 
 # Currently dynamizing the app:
 
-* Authentication with register is working, but I have to enable adding user to database
+* Authentication is fully done, we are now going to make effective CRUD
 
 # About the site:
 
