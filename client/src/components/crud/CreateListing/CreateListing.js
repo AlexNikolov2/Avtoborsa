@@ -7,6 +7,7 @@ import {
   collection,
   addDoc,
 } from "firebase/firestore";
+import {Navigate} from 'react-router-dom';
 
 export const CreateListing = ({match, history}) => {
   const [item, setItem] = useState({});
@@ -50,6 +51,8 @@ export const CreateListing = ({match, history}) => {
     addDoc(listingsCollectionRef, { product });
 
     console.log(addDoc(listingsCollectionRef, { product }))
+
+   return( <Navigate to="/home"/>)
   }
 
     return (

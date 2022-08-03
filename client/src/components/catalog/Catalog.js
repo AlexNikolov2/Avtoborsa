@@ -3,9 +3,16 @@ import { CatalogParticle } from "./particle/CatalogParticle.js";
 import { useState, useEffect } from "react";
 import firebase from "../../config/firebase";
 //import { Link } from "react-router-dom";
+import {
+  collection,
+  getDocs,
+  doc,
+} from "firebase/firestore";
+import { db } from "../../config/firebase";
 
 export const Catalog = () => {
   const [products, setProducts] = useState([]);
+  const listingsCollectionRef = collection(db, "Listings");
 
   useEffect(() => {
     firebase
@@ -29,19 +36,20 @@ export const Catalog = () => {
       });
   }, []);
 
+
   return (
     <section className="catalog">
       <h1>All Listings</h1>
       <div className="cars">
         {products.length > 0 ? (
           products.map((product) => {
-            console.log(product.info);
+            //console.log(product.info.product);
 
             return(
               <CatalogParticle
               key={product.id}
               id={product.id}
-              item={product.info}
+              item={product.info.product}
             />
             )
           })
