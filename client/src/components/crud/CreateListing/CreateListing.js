@@ -7,10 +7,15 @@ import {
   collection,
   addDoc,
 } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 
-export const CreateListing = ({match, history}) => {
+
+
+
+export const CreateListing = ( history) => {
   //const [item, setItem] = useState({});
   const [errors, setErrors] = useState([]);
+  const navigate = useNavigate();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -51,9 +56,9 @@ export const CreateListing = ({match, history}) => {
 
     console.log(addDoc(listingsCollectionRef, { product }))
 
-   
+    
+    navigate("/home");
   }
-
     return (
       <section className="create">
         {errors.length < 1 ? (
