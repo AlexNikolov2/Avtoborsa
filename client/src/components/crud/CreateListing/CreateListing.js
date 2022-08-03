@@ -8,6 +8,7 @@ import {
   addDoc,
 } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
+import authServices from '../../../utils/authService'
 
 
 
@@ -16,6 +17,10 @@ export const CreateListing = ( history) => {
   //const [item, setItem] = useState({});
   const [errors, setErrors] = useState([]);
   const navigate = useNavigate();
+  //const user = useGetUserData();
+  //console.log(user);
+  console.log(authServices.getUserData().user.uid);
+  
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -47,8 +52,9 @@ export const CreateListing = ( history) => {
        year,
        imageUrl,
        description,
-       
+       creator: authServices.getUserData().user.uid
     };
+    console.log(product.creator);
 
     const listingsCollectionRef = collection(db, "Listings");
 

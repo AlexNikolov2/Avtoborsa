@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import UserContext from "../../../contexts/UserContext";
 import { Navigate } from "react-router-dom";
 import firebase from "../../../config/firebase";
+import authServices from "../../../utils/authService"
 
 export const Login = () => {
   const user = useContext(UserContext);
@@ -19,11 +20,17 @@ export const Login = () => {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
+      .then((data) => {
+        localStorage.setItem(`user`, JSON.stringify(data));
+        console.log(data);
+      })
       .catch((err) => {
         if (err.code === "auth/user-not-found")
           setError("There is no account corresponding to this email");
         if (err.code === "auth/wrong-password") setError("Wrong password");
       });
+
+      
   };
 
   if (user) {

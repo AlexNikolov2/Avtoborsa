@@ -3,7 +3,7 @@ import './Header.css'
 import {Link} from 'react-router-dom';
 import { useContext } from 'react';
 import UserContext from '../../../contexts/UserContext'
-import clearUserData from '../../../hooks/authService'
+import authServices from '../../../utils/authService'
 import firebase from '../../../config/firebase';
 
 export const Header = () => {
@@ -13,7 +13,7 @@ export const Header = () => {
             .auth()
             .signOut()
             .then((response) => {
-                clearUserData();
+                authServices.clearUserData();
             })
             .catch((err) => {
                 console.log(err);
