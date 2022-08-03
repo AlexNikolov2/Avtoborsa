@@ -1,16 +1,15 @@
 import './CreateListing.css'
 import image from '../../../assets/crud-img.jpg'
-import {useState,useEffect } from 'react';
-import firebase from '../../../config/firebase';
+import { useState } from 'react';
+//import firebase from '../../../config/firebase';
 import { db } from "../../../config/firebase";
 import {
   collection,
   addDoc,
 } from "firebase/firestore";
-import {Navigate} from 'react-router-dom';
 
 export const CreateListing = ({match, history}) => {
-  const [item, setItem] = useState({});
+  //const [item, setItem] = useState({});
   const [errors, setErrors] = useState([]);
 
   const onSubmit = (e) => {
@@ -52,7 +51,7 @@ export const CreateListing = ({match, history}) => {
 
     console.log(addDoc(listingsCollectionRef, { product }))
 
-   return( <Navigate to="/home"/>)
+   
   }
 
     return (
