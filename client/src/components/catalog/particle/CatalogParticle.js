@@ -7,7 +7,7 @@ export const CatalogParticle = (item) => {
     return(
         <section className="car">
             <h3>{item.item.name}</h3>
-            <img src={item.item.image} alt="" />
+            <img src={item.item.imageUrl} alt="" />
             <p className="year"><b>Year: </b>{item.item.year}</p>
             <p className="price"><b>Price: </b>{item.item.price} $</p>
             <Link to={`/details/${item.id}`}>Details</Link>

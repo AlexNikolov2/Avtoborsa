@@ -1,7 +1,7 @@
 import firebase from "firebase/compat/app";
 
 import "firebase/compat/auth";
-import "firebase/compat/firestore";
+import { getFirestore } from "@firebase/firestore";
 import "firebase/compat/storage";
 
 const firebaseConfig = {
@@ -14,7 +14,7 @@ const firebaseConfig = {
     measurementId: "G-SXZZRG1ZR4"
   };
 
-  const app = firebase.initializeApp(firebaseConfig);
-  firebase.getStorage(app);
+  let app = firebase.initializeApp(firebaseConfig);
+  export const db = getFirestore(app);
 
 export default firebase;
