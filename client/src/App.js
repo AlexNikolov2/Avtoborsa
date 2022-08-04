@@ -18,6 +18,7 @@ import { useState, useEffect } from "react";
 import firebase from "./config/firebase";
 
 import UserContext from "./contexts/UserContext";
+import { NotFound } from "./components/notFound/NotFound";
 
 function App() {
   const [user, setUser] = useState({});
@@ -41,6 +42,7 @@ function App() {
           <Route path="/profile" exact element={<Profile />} />
           <Route path="/details/:id" exact element={<DetailsListing />} />
           <Route path="/search" exact element={<Search />} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
 
         <Footer />
