@@ -26,8 +26,8 @@ export const CreateListing = ( history) => {
     e.preventDefault();
 
     let name = e.target.name.value;
-    let price = e.target.price.value;
-    let year = e.target.year.value;
+    let price = Number(e.target.price.value);
+    let year = Number(e.target.year.value);
     let imageUrl = e.target.imageUrl.value;
     let description = e.target.description.value;
 
