@@ -39,7 +39,7 @@ function App() {
           <Route path="/home" exact element={<Catalog />} />
           <Route path="/register" exact element={<Register />} />
           <Route path="/profile" exact element={<Profile />} />
-          <Route path="/details" exact element={<DetailsListing />} />
+          <Route path="/details/:id" exact element={<DetailsListing />} />
           <Route path="/search" exact element={<Search />} />
         </Routes>
 

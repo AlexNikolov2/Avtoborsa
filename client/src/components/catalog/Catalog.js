@@ -27,7 +27,7 @@ export const Catalog = () => {
         setProducts(arr);
         //console.log(arr);
       });
-  }, []);
+  }, [products]);
 
 
   return (
