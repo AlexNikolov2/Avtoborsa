@@ -27,6 +27,7 @@ function App() {
   useEffect(() => {
     firebase.auth().onAuthStateChanged(setUser);
   }, [newUser]);
+  
 
   return (
     <UserContext.Provider value={user}>
@@ -40,7 +41,7 @@ function App() {
           <Route path="/home" exact element={<Catalog />} />
           <Route path="/register" exact element={<Register />} />
           <Route path="/profile" exact element={<Profile />} />
-          <Route path="/details/:id" exact element={<DetailsListing />} />
+          <Route path="/details/:id" exact element={<DetailsListing />}/>
           <Route path="/search" exact element={<Search />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>

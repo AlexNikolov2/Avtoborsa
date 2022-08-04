@@ -1,56 +1,69 @@
 import "./DetailsListing.css";
 import image from "../../../assets/car-test.jpg";
-import posts from '../../../utils/posts'
-import {useContext, useState, useEffect} from 'react';
-import UserContext from '../../../contexts/UserContext'
+import { useNavigate, useParams } from "react-router-dom";
+import posts from "../../../utils/posts";
+import { useEffect, useState } from "react";
+import firebase from '../../../config/firebase'
 
-export const DetailsListing = ({ history, match }) => {
-  const user = useContext(UserContext)
+export const DetailsListing = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
 
-    const [articleData, setArticleData] = useState({
-        name: '',
-        price: 0,
-        year: 0,
-        
-    });
-  //const articleId = match.params.id;
+  const [listing, setListing] = useState({
+    product: {}
+  });
 
-  /*useEffect(() => {
-    posts
-        .getOne(articleId)
-        .then(res => {
-            setArticleData(res)
+  useEffect(() => {
+    firebase.firestore().collection("Listings")
+        .doc(id)
+        .get()
+        .then((doc) => setListing(doc.data()))
+        /*.then((fetchedPlace) => {
+            const id = fetchedPlace.id;
+            const article = { ...fetchedPlace.data(), id };
+            console.log(article);
+            return article;
+        })*/
+        .catch((err) => {
+            console.log(err);
         })
-        .catch(err => console.log(err));
-}, [articleId]);*/
+    /*posts
+      .getOne(id)
+      .then((res) => {
+        setListing(res);
+        
+      })
+      .catch((err) => console.log(err));*/
+  }, [id]);
 
-  return (
-    <section className="container">
-      <div className="details">
-        <h2>Car</h2>
-        <img src={image} alt="alt text" />
-        <article className="infos">
-          <p>
-            <b>Year:</b> 2003
+  console.log(listing.product.name);
+  
+  if(listing == {}){return <p>Loading...</p>;}
+  else{
+    return (
+      <section className="container">
+        <div className="details">
+          <h2>{listing.product.name}</h2>
+          <img src={listing.product.imageUrl} alt="alt text" />
+          <article className="infos">
+            <p>
+              <b>Year:</b> {listing.product.year}
+            </p>
+            <p>
+              <b>Price:</b> {listing.product.price}$
+            </p>
+          </article>
+          <p className="description">
+            {listing.product.description}
           </p>
-          <p>
-            <b>Price:</b> 226000$
-          </p>
-          <p>
-            <b>Type:</b> Petrol
-          </p>
-        </article>
-        <p className="description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-          iure eos soluta vitae aliquam quos numquam distinctio quisquam
-          deserunt quasi aut ipsum quidem, eligendi voluptas facere nemo culpa
-          sequi hic.
-        </p>
-        <div className="buttons">
+          <div className="buttons">
             <button id="edit">Edit</button>
             <button id="delete">Delete</button>
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  }
+  
+  
 };
