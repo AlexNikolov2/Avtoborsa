@@ -5,7 +5,6 @@ import { useContext, useState } from "react";
 import UserContext from "../../../contexts/UserContext";
 import { Navigate } from "react-router-dom";
 import firebase from "../../../config/firebase";
-import authServices from "../../../utils/authService"
 
 export const Login = () => {
   const user = useContext(UserContext);

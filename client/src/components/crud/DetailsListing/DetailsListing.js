@@ -35,7 +35,7 @@ export const DetailsListing = () => {
   }
 
   console.log(user);
-  const isOwner = listing.product.creator == user.uid
+  const isOwner = listing.product.creator === user.uid;
 
   console.log(isOwner);
 
