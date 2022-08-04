@@ -1,13 +1,13 @@
 import "./DetailsListing.css";
-import image from "../../../assets/car-test.jpg";
 import { useNavigate, useParams } from "react-router-dom";
-import posts from "../../../utils/posts";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useContext} from "react";
 import firebase from '../../../config/firebase'
+import UserContext from '../../../contexts/UserContext'
 
 export const DetailsListing = () => {
   const navigate = useNavigate();
   const { id } = useParams();
+  const user = useContext(UserContext);
 
   const [listing, setListing] = useState({
     product: {}
@@ -18,28 +18,27 @@ export const DetailsListing = () => {
         .doc(id)
         .get()
         .then((doc) => setListing(doc.data()))
-        /*.then((fetchedPlace) => {
-            const id = fetchedPlace.id;
-            const article = { ...fetchedPlace.data(), id };
-            console.log(article);
-            return article;
-        })*/
         .catch((err) => {
             console.log(err);
         })
-    /*posts
-      .getOne(id)
-      .then((res) => {
-        setListing(res);
-        
-      })
-      .catch((err) => console.log(err));*/
   }, [id]);
 
-  console.log(listing.product.name);
+  const onDelete = () => {
+    const confirmation = window.confirm('Are you sure you want to delete your listing?');
   
-  if(listing == {}){return <p>Loading...</p>;}
-  else{
+    if (confirmation) {
+      firebase.firestore().collection("Listings").doc(id).delete()
+          .then(() => {
+              navigate('/home');
+          })
+  }
+  }
+
+  console.log(user);
+  const isOwner = listing.product.creator == user.uid
+
+  console.log(isOwner);
+
     return (
       <section className="container">
         <div className="details">
@@ -56,14 +55,15 @@ export const DetailsListing = () => {
           <p className="description">
             {listing.product.description}
           </p>
+          {isOwner?
           <div className="buttons">
             <button id="edit">Edit</button>
-            <button id="delete">Delete</button>
-          </div>
+            <button id="delete" onClick={onDelete}>Delete</button>
+          </div>: ""
+}
         </div>
       </section>
     );
-  }
   
   
 };

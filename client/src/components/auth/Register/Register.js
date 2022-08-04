@@ -38,13 +38,13 @@ export const Register = () => {
         let currUser = firebase.auth().currentUser;
         const user = credentials.user;
         const id = currUser.uid;
-        const listings = [];
         firebase
           .firestore()
           .collection("Users")
           .doc(currUser.uid)
-          .set({ id, email, listings })
+          .set({ id, email })
           .then(this.checkStatus({ user }));
+          localStorage.setItem(`user`, JSON.stringify(credentials));
       })
         .catch((err) => {
             setErrors([err.message]);
