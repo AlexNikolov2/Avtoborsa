@@ -8,7 +8,7 @@ Nowadays it's not easy to find the car you want. Thousands of car brands, each w
 
 # Currently dynamizing the app:
 
-* Authentication is fully done, we are now going to make effective CRUD
+* Authentication is fully done, as well as details page,create and delete, now we are left to make edit, search, profile.
 
 # About the site:
 
