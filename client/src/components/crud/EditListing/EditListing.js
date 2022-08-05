@@ -75,6 +75,19 @@ export const EditListing = () => {
 
   return (
     <section className="edit">
+      {errors.length < 1 ? (
+            ""
+         ) : (
+            <article>
+               {errors?.map((err) => {
+                  return (
+                     <p className="err" key={err}>
+                        {err}
+                     </p>
+                  );
+               })}
+            </article>
+         )}
       <img src={image} alt="" />
       <form onSubmit={onSubmit}>
         <input

@@ -59,3 +59,14 @@
 .edit input, textarea{
     color: black;
 }
+.edit article{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    max-width: 200px;
+    background-color: red;
+    color: white;
+    padding: 2px;
+    border: 2px solid darkred;
+}
