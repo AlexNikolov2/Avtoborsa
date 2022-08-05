@@ -32,7 +32,7 @@ export const Header = () => {
                     user && 
                     <>
                         <li><Link to="/create"><i className="fa-solid fa-square-plus"></i>Create</Link></li>
-                        <li><Link to="/profile"><i className="fa-solid fa-address-card"></i>Profile</Link></li>
+                        <li><Link to={`/profile/${user.uid}`}><i className="fa-solid fa-address-card"></i>Profile</Link></li>
                         <li onClick={onLogout}><Link to="/"><i className="fa-solid fa-right-from-bracket"></i>Log out</Link></li>
                     </>
                 }

@@ -29,7 +29,6 @@ export const Catalog = () => {
       });
   }, []);
 
-
   return (
     <section className="catalog">
       <h1>All Listings</h1>

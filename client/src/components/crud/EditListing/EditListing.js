@@ -5,6 +5,7 @@ import { useContext, useState, useEffect } from "react";
 import UserContext from "../../../contexts/UserContext";
 import firebase from "../../../config/firebase";
 import authServices from "../../../utils/authService";
+import {Navigate} from 'react-router-dom';
 
 export const EditListing = () => {
   const [listing, setListing] = useState({ product: {} });
@@ -73,60 +74,66 @@ export const EditListing = () => {
     navigate("/home");
   };
 
-  return (
-    <section className="edit">
-      {errors.length < 1 ? (
-            ""
-         ) : (
-            <article>
-               {errors?.map((err) => {
-                  return (
-                     <p className="err" key={err}>
-                        {err}
-                     </p>
-                  );
-               })}
-            </article>
-         )}
-      <img src={image} alt="" />
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Car name/model"
-          defaultValue={listing.product.name}
-        />
-        <div className="numbers">
+  if(user.uid !== listing.product.creator){
+    return <Navigate to={`/details/${id}`} />;
+  }
+  else{
+    return (
+      <section className="edit">
+        {errors.length < 1 ? (
+              ""
+           ) : (
+              <article>
+                 {errors?.map((err) => {
+                    return (
+                       <p className="err" key={err}>
+                          {err}
+                       </p>
+                    );
+                 })}
+              </article>
+           )}
+        <img src={image} alt="" />
+        <form onSubmit={onSubmit}>
           <input
-            type="number"
-            name="price"
-            placeholder="price in $$$"
-            defaultValue={listing.product.price}
+            type="text"
+            name="name"
+            placeholder="Car name/model"
+            defaultValue={listing.product.name}
           />
-          $
+          <div className="numbers">
+            <input
+              type="number"
+              name="price"
+              placeholder="price in $$$"
+              defaultValue={listing.product.price}
+            />
+            $
+            <input
+              type="number"
+              name="year"
+              placeholder="year"
+              defaultValue={listing.product.year}
+            />
+          </div>
           <input
-            type="number"
-            name="year"
-            placeholder="year"
-            defaultValue={listing.product.year}
+            type="text"
+            name="imageUrl"
+            placeholder="Image URL"
+            defaultValue={listing.product.imageUrl}
           />
-        </div>
-        <input
-          type="text"
-          name="imageUrl"
-          placeholder="Image URL"
-          defaultValue={listing.product.imageUrl}
-        />
-        <textarea
-          name="description"
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Description"
-          defaultValue={listing.product.description}
-        ></textarea>
-        <button>Edit Listing</button>
-      </form>
-    </section>
-  );
+          <textarea
+            name="description"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Description"
+            defaultValue={listing.product.description}
+          ></textarea>
+          <button>Edit Listing</button>
+        </form>
+      </section>
+    );
+  }
+  
 };

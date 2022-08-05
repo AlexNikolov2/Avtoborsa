@@ -1,10 +1,12 @@
 import "./Profile.css";
 import { CatalogParticle } from "../../catalog/particle/CatalogParticle";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext} from "react";
 import firebase from "../../../config/firebase"
+import UserContext from '../../../contexts/UserContext';
 
 export const Profile = () => {
-  const [products, setProducts] = useState([]);
+  const user = useContext(UserContext);
+  const [listings, setListings] = useState([]);
 
   useEffect(() => {
     firebase
@@ -14,33 +16,37 @@ export const Profile = () => {
       .then((data) => {
         let arr = [];
         data.forEach((doc) => {
+          
           let info = doc.data();
           arr.push({
             id: doc.id,
-            info: info,
+            info: info
           });
+          
         });
-
-        setProducts(arr);
+        
+        setListings(arr);
         //console.log(arr);
       });
   }, []);
+  let userListings = listings.filter((x) => x.info.product.creator === user.uid)
+  console.log(userListings);
 
   return (
     <section className="profile">
-      <h1>Alex Nikolov's uploaded listings</h1>
+      <h1>{user.email}'s uploaded listings</h1>
       <div className="cars">
-        {products.length > 0 ? (
-          products.map((product) => {
-            console.log(product.info);
+      {userListings.length > 0 ? (
+          userListings.map((product) => {
+            //console.log(product.info.product);
 
-            return (
+            return(
               <CatalogParticle
-                key={product.id}
-                id={product.id}
-                item={product.info}
-              />
-            );
+              key={product.id}
+              id={product.id}
+              item={product.info.product}
+            />
+            )
           })
         ) : (
           <p>No listings yet</p>
