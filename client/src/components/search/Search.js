@@ -76,7 +76,7 @@ export const Search = () => {
             )
           })
         ) : (
-          <p>No listings yet</p>
+          <p>No listings found!</p>
         )}
       </article>
     </section>

@@ -50,6 +50,9 @@ export const EditListing = () => {
     if (description.length < 50)
       errs.push("Description should be at least 50 chars long!");
 
+      if (year < 1900 || year > 2023) errs.push("Year has to be between 1900 and 2023!")
+    if (price <= 0) errs.push("Price should be a positive number!")
+
     setErrors(errs);
 
     if (errs.length > 0) {
