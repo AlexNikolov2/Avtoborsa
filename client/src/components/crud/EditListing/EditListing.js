@@ -1,18 +1,17 @@
 import "./EditListing.css";
 import image from "../../../assets/crud-img.jpg";
 import { useNavigate, useParams } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
-import UserContext from "../../../contexts/UserContext";
+import { useState, useEffect } from "react";
+//import UserContext from "../../../contexts/UserContext";
 import firebase from "../../../config/firebase";
 import authServices from "../../../utils/authService";
-import {Navigate} from 'react-router-dom';
 
 export const EditListing = () => {
   const [listing, setListing] = useState({ product: {} });
   const [errors, setErrors] = useState([]);
   const navigate = useNavigate();
   const { id } = useParams();
-  const user = useContext(UserContext);
+  //const user = useContext(UserContext);
   console.log(id);
 
   let listingId = id;
@@ -74,10 +73,6 @@ export const EditListing = () => {
     navigate("/home");
   };
 
-  if(user.uid !== listing.product.creator){
-    return <Navigate to={`/details/${id}`} />;
-  }
-  else{
     return (
       <section className="edit">
         {errors.length < 1 ? (
@@ -134,6 +129,5 @@ export const EditListing = () => {
         </form>
       </section>
     );
-  }
   
 };
