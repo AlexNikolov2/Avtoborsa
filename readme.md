@@ -9,6 +9,7 @@ Nowadays it's not easy to find the car you want. Thousands of car brands, each w
 # Currently optimizing the app:
 
 * 100% done with all required functionalities.
+* Currently creating project documentation
 
 # Functionalities :
 
@@ -21,6 +22,11 @@ Edit post   | ![alt](https://img.icons8.com/emoji/60/000000/cross-mark-emoji.png
 Delete post         | ![alt](https://img.icons8.com/emoji/60/000000/cross-mark-emoji.png) | ![alt](https://img.icons8.com/emoji/48/000000/cross-mark-emoji.png) | ![alt](https://img.icons8.com/fluency/60/000000/checkmark.png)
 Create post    | ![alt](https://img.icons8.com/emoji/60/000000/cross-mark-emoji.png) | ![alt](https://img.icons8.com/fluency/60/000000/checkmark.png) | ![alt](https://img.icons8.com/fluency/60/000000/checkmark.png)
 View profile | ![alt](https://img.icons8.com/emoji/60/000000/cross-mark-emoji.png) | ![alt](https://img.icons8.com/fluency/60/000000/checkmark.png) | ![alt](https://img.icons8.com/fluency/60/000000/checkmark.png)
+
+# Features:
+
+* React 18 as Front-End framework/library
+* Firebase used as a BaaS
 # About the site:
 
 **Built with:**
