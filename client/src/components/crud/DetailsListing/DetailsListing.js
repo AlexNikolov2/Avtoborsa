@@ -34,6 +34,10 @@ export const DetailsListing = () => {
   }
   }
 
+  const toEdit = () => {
+    navigate('/edit');
+  }
+
   console.log(user);
   const isOwner = listing.product.creator === user.uid;
 
@@ -57,7 +61,7 @@ export const DetailsListing = () => {
           </p>
           {isOwner?
           <div className="buttons">
-            <button id="edit">Edit</button>
+            <button id="edit" onClick={toEdit}>Edit</button>
             <button id="delete" onClick={onDelete}>Delete</button>
           </div>: ""
 }
