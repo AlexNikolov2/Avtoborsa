@@ -1,11 +1,22 @@
 footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: rgb(0, 81, 255);
     margin: 0 13rem;
     box-shadow: 0px 0px 18px 0 rgb(21, 0, 143), 0px 6px 20px 0 rgb(4, 4, 4);
 }
 footer h1{
     color: white;
+    font-size: 22px
+}
+footer .wrap{
+    display: flex;
+    flex-direction: row;
+}
+footer i{
+    position: relative;
+    top: 15px;
+    left: 10px;
 }

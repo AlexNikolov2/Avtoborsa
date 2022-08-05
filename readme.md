@@ -10,6 +10,8 @@ Nowadays it's not easy to find the car you want. Thousands of car brands, each w
 
 * 100% done with all required functionalities.
 
+# Functionalities :
+
 # About the site:
 
 **Built with:**
