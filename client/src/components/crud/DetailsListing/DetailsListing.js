@@ -35,7 +35,7 @@ export const DetailsListing = () => {
   }
 
   const toEdit = () => {
-    navigate('/edit');
+    navigate('/edit/' + id);
   }
 
   console.log(user);
