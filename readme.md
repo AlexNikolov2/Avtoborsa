@@ -41,7 +41,7 @@ View profile | ![alt](https://img.icons8.com/emoji/60/000000/cross-mark-emoji.pn
 ![html](https://img.icons8.com/color/100/000000/html-5--v1.png)
 ![css](https://img.icons8.com/color/100/000000/css3.png)
 
-**How do I start the app locally?
+**How do I start the app locally?**
 
 First, type in the terminal
 ```
