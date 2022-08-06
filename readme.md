@@ -27,6 +27,9 @@ View profile | ![alt](https://img.icons8.com/emoji/60/000000/cross-mark-emoji.pn
 
 * React 18 as Front-End framework/library
 * Firebase used as a BaaS
+* Deployed in real enviroment via Firebase Hosting
+* Authentication, CRUD, Searching
+
 # About the site:
 
 **Built with:**
@@ -39,4 +42,4 @@ View profile | ![alt](https://img.icons8.com/emoji/60/000000/cross-mark-emoji.pn
 
 **THE BIGGEST EVER SPECIAL OPERATION!**
 
-This site is my React project assignment for SoftUni's final course in their Software Engineering program. Two years passed, this is the final course, and all looks are set to complete it, so I can focus from September only on school, since it will be my last year.
+This site is my React project assignment for SoftUni's final course in their Software Engineering program. Two years passed, this is the final course, and all looks are set to complete it, so I can focus from September only on school, since it will be my last year. My goal was to make an app, where people could create and search listings for cars, therefore simulating a automobile market. I was inspired by various sites, such as Mobile.bg, Auto.bg and etc. Project was officially began on 1st July 2022. Design was ready by the end of the month, and app was fully functioning by 5th of August. Project defense is on 13th of August.
