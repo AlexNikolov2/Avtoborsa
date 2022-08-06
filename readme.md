@@ -5,6 +5,7 @@
 ![tito fc](./client/src/assets/Screenshot%202022-07-17%20230358.png)
 
 Nowadays it's not easy to find the car you want. Thousands of car brands, each with its own pros and cons. Not only this, but there are so many different autohouses around the country, which makes it even harder to find the car you want. That is the reason why Avtoborsa exists - to help you find the car you want.
+Avtoborsa is the newest online automobile market in Bulgaria - it offers modern design, good set of functionalities, and a truly lots of car listings. Come on, join the newest car community in Bulgaria!
 
 # Currently optimizing the app:
 
