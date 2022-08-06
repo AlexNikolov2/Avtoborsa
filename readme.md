@@ -53,6 +53,11 @@ and then go for
 npm run start
 ```
 This will start both the React app and the Firebase BaaS.
+But don't forget before that to make a 
+```
+npm install
+```
+So you can install all required dependencies.
 
 **THE BIGGEST EVER SPECIAL OPERATION!**
 
