@@ -2,7 +2,6 @@ import "./Catalog.css";
 import { CatalogParticle } from "./particle/CatalogParticle.js";
 import { useState, useEffect } from "react";
 import firebase from "../../config/firebase";
-//import { Link } from "react-router-dom";
 
 export const Catalog = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +24,6 @@ export const Catalog = () => {
         });
         
         setProducts(arr);
-        //console.log(arr);
       });
   }, []);
 
@@ -35,7 +33,6 @@ export const Catalog = () => {
       <div className="cars">
         {products.length > 0 ? (
           products.map((product) => {
-            //console.log(product.info.product);
 
             return(
               <CatalogParticle

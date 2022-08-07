@@ -26,11 +26,9 @@ export const Profile = () => {
         });
         
         setListings(arr);
-        //console.log(arr);
       });
   }, []);
   let userListings = listings.filter((x) => x.info.product.creator === user.uid)
-  console.log(userListings);
 
   return (
     <section className="profile">
@@ -38,7 +36,6 @@ export const Profile = () => {
       <div className="cars">
       {userListings.length > 0 ? (
           userListings.map((product) => {
-            //console.log(product.info.product);
 
             return(
               <CatalogParticle

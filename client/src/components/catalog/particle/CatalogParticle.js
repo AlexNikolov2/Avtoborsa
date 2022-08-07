@@ -1,11 +1,9 @@
 import './CatalogParticle.css';
-//import image from '../../../assets/car-test.jpg';
 import { Link } from 'react-router-dom';
 import UserContext from '../../../contexts/UserContext'
 import {useContext} from 'react';
 
 export const CatalogParticle = ({id, item}) => {
-    console.log(item);
     const user = useContext(UserContext);
     return(
         <section className="car">

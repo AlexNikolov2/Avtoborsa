@@ -1,22 +1,19 @@
 import './CreateListing.css'
 import image from '../../../assets/crud-img.jpg'
 import { useState } from 'react';
-//import firebase from '../../../config/firebase';
 import { db } from "../../../config/firebase";
 import {
   collection,
   addDoc,
 } from "firebase/firestore";
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import authServices from '../../../utils/authService'
 
 
 export const CreateListing = ( history) => {
-  //const [item, setItem] = useState({});
   const [errors, setErrors] = useState([]);
   const navigate = useNavigate();
-  //const user = useGetUserData();
-  //console.log(user);
+  const user = authServices.getUserData().user.uid;
   console.log(authServices.getUserData().user.uid);
   
 
@@ -66,6 +63,7 @@ export const CreateListing = ( history) => {
     
     navigate("/home");
   }
+  if(user){
     return (
       <section className="create">
         {errors.length < 1 ? (
@@ -94,6 +92,10 @@ export const CreateListing = ( history) => {
         </form>
       </section>
     );
+  }
+    else if(user == undefined){
+      return <Navigate to="/home"></Navigate>
+    }
  };
 
 
