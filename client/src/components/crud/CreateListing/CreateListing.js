@@ -11,8 +11,6 @@ import { useNavigate } from 'react-router-dom';
 import authServices from '../../../utils/authService'
 
 
-
-
 export const CreateListing = ( history) => {
   //const [item, setItem] = useState({});
   const [errors, setErrors] = useState([]);
@@ -91,22 +89,6 @@ export const CreateListing = ( history) => {
             <input type="number" name="year" placeholder="year" />
           </div>
           <input type="text" name="imageUrl" placeholder="Image URL"/>
-          {/*<fieldset>
-            <legend>Fuel type</legend>
-            <div>
-              <input type="radio" />
-              <label htmlFor="gas">LPG</label>
-  
-              <input type="radio" />
-              <label htmlFor="gas">Gasoline</label>
-  
-              <input type="radio" />
-              <label htmlFor="diesel">Diesel</label>
-  
-              <input type="radio" />
-              <label htmlFor="electricity">Electricity</label>
-            </div>
-          </fieldset>*/}
           <textarea name="description" id="" cols="30" rows="10" placeholder="Description"></textarea>
           <button>Create Listing</button>
         </form>
