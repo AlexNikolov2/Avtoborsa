@@ -1,6 +1,6 @@
 import './CreateListing.css'
 import image from '../../../assets/crud-img.jpg'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { db } from "../../../config/firebase";
 import {
   collection,
@@ -8,12 +8,13 @@ import {
 } from "firebase/firestore";
 import { Navigate, useNavigate } from 'react-router-dom';
 import authServices from '../../../utils/authService'
+import UserContext from '../../../contexts/UserContext'
 
 
 export const CreateListing = ( history) => {
   const [errors, setErrors] = useState([]);
   const navigate = useNavigate();
-  const user = authServices.getUserData().user.uid;
+  const user = useContext(UserContext);
   console.log(authServices.getUserData().user.uid);
   
 

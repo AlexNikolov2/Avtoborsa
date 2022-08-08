@@ -16,6 +16,10 @@ export const Login = () => {
     let email = e.target.email.value;
     let password = e.target.password.value;
 
+    if(email === '' || password === '') {
+      setError("You can't have empty fields!")
+    }
+
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
