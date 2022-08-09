@@ -49,11 +49,11 @@ export const Login = () => {
           <h1>Log In</h1>
           <div className="email">
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" placeholder="Your email here" />
+            <input type="text" name="email" placeholder="Your email here" defaultValue=""/>
           </div>
           <div className="password">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" placeholder="Your password here" />
+            <input type="password" name="password" placeholder="Your password here" defaultValue=""/>
           </div>
           <button type="submit">Log in!</button>
         </form>

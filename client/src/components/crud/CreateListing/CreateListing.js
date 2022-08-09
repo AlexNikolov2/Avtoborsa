@@ -64,7 +64,7 @@ export const CreateListing = ( history) => {
     
     navigate("/home");
   }
-  if(user){
+
     return (
       <section className="create">
         {errors.length < 1 ? (
@@ -93,10 +93,6 @@ export const CreateListing = ( history) => {
         </form>
       </section>
     );
-  }
-    else if(user == undefined){
-      return <Navigate to="/home"></Navigate>
-    }
  };
 
 
