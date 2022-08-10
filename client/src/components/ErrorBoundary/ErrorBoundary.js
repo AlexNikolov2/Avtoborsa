@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 import image from '../../assets/error.jpg'
 import './ErrorBoundary.css'
 
@@ -19,6 +19,7 @@ export class ErrorBoundary extends Component {
 	componentDidCatch(error, info) {
 		console.log(error)
 		console.log(info)
+        return info;
 	}
 
 	render() {
@@ -27,7 +28,8 @@ export class ErrorBoundary extends Component {
             <div className="error">
                 <img src={image} alt="" />
                 <h1>Oops! Something went wrong.</h1>
-                <Link to="/home">Lets go back where we started.</Link>
+                <p>Refresh the site and keep going like nothing happened.</p>
+                <Navigate to="/"/>
             </div>
             )
 		}

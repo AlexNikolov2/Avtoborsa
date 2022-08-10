@@ -17,17 +17,15 @@
 .error h1{
     position: absolute;
     left: 36%;
+    top: 40%;
     font-size: 33px;
     font-weight: bold;
 }
-.error a{
+.error p{
     position: absolute;
     top: 50%;
-    left: 41%;
+    left: 34%;
     font-size: 20px;
     font-weight: bold;
-    text-decoration: none;
-}
-.error a:hover{
-    background-color: rgba(4, 4, 4, 0.612)
+    
 }
