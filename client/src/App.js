@@ -19,6 +19,7 @@ import firebase from "./config/firebase";
 
 import UserContext from "./contexts/UserContext";
 import { NotFound } from "./components/notFound/NotFound";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 function App() {
   const [user, setUser] = useState({});
@@ -33,7 +34,9 @@ function App() {
     <UserContext.Provider value={user}>
       <div className="App">
         <Header />
+        <ErrorBoundary>
         <Routes>
+          
           <Route path="/" exact element={<LandingPage />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/create" exact element={<CreateListing />} />
@@ -44,7 +47,9 @@ function App() {
           <Route path="/details/:id" exact element={<DetailsListing />}/>
           <Route path="/search" exact element={<Search />} />
           <Route path="*" element={<NotFound/>} />
+          
         </Routes>
+        </ErrorBoundary>
 
         <Footer />
       </div>

@@ -1,11 +1,11 @@
-.notFound{
+.error{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 0 13rem;
     box-shadow: 0px 0px 18px 0 rgb(21, 0, 143), 0px 6px 20px 0 rgb(4, 4, 4);
 }
-.notFound img{
+.error img{
     position: relative;
     text-align: center;
     color: white;
@@ -14,21 +14,13 @@
     height: 600px;
     filter: brightness(50%);
 }
-.notFound p{
+.error h1{
     position: absolute;
-    left: 42%;
+    left: 36%;
     font-size: 33px;
     font-weight: bold;
 }
-.notFound .reason{
-    position: absolute;
-    top: 30%;
-    left: 39%;
-    font-size: 20px;
-    font-weight: bold;
-    
-}
-.notFound a{
+.error a{
     position: absolute;
     top: 50%;
     left: 41%;
@@ -36,6 +28,6 @@
     font-weight: bold;
     text-decoration: none;
 }
-.notFound a:hover{
+.error a:hover{
     background-color: rgba(4, 4, 4, 0.612)
 }
