@@ -12,6 +12,7 @@ Avtoborsa is the newest online automobile market in Bulgaria - it offers modern 
 * 100% done with all required functionalities.
 * Project documentation done.
 * App deployed via Firebase hosting
+* Added Error Boundary
 
 # Functionalities :
 
