@@ -44,7 +44,7 @@ export const Register = () => {
           .doc(currUser.uid)
           .set({ id, email })
           .then(this.checkStatus({ user }));
-          localStorage.setItem(`user`, JSON.stringify(credentials));
+          //localStorage.setItem(`user`, JSON.stringify(credentials));
       })
         .catch((err) => {
             setErrors([err.message]);

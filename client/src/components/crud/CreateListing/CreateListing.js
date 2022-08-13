@@ -10,10 +10,10 @@ import { useNavigate } from 'react-router-dom';
 import authServices from '../../../utils/authService'
 
 
-export const CreateListing = ( history) => {
+export const CreateListing = ( ) => {
   const [errors, setErrors] = useState([]);
   const navigate = useNavigate();
-  console.log(authServices.getUserData().user.uid);
+  //console.log(authServices.getUserData().user.uid);
   
 
   const onSubmit = (e) => {
@@ -51,7 +51,7 @@ export const CreateListing = ( history) => {
        description,
        creator: authServices.getUserData().user.uid
     };
-    console.log(product.creator);
+    //console.log(product.creator);
 
     const listingsCollectionRef = collection(db, "Listings");
 
