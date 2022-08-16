@@ -64,3 +64,9 @@ So you can install all required dependencies.
 **THE BIGGEST EVER SPECIAL OPERATION!**
 
 This site is my React project assignment for SoftUni's final course in their Software Engineering program. Two years passed, this is the final course, and all looks are set to complete it, so I can focus from September only on school, since it will be my last year. My goal was to make an app, where people could create and search listings for cars, therefore simulating a automobile market. I was inspired by various sites, such as Mobile.bg, Auto.bg and etc. Project was officially began on 1st July 2022. Design was ready by the end of the month, and app was fully functioning by 5th of August. Project defense is on 13th of August.
+
+# Results:
+
+The project was graded with 6.00/6.00 and with maximum points. The project defense was regarded as very good, and there were not problems registered within the application.
+
+Here is my certificate: https://softuni.bg/certificates/details/140637/27c365f3
