@@ -32,3 +32,6 @@
 .car h3, b{
     color: black;
 }
+.car div{
+    padding-top: 10px;
+}
