@@ -1,6 +1,6 @@
 import './CatalogParticle.css';
 import { Link } from 'react-router-dom';
-import UserContext from '../../../contexts/UserContext'
+import UserContext from '../../contexts/UserContext'
 import {useContext, useState} from 'react';
 
 export const CatalogParticle = ({id, item}) => {

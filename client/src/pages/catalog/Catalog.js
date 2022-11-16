@@ -1,12 +1,10 @@
-import "./Profile.css";
-import { CatalogParticle } from "../../catalog/particle/CatalogParticle";
-import { useState, useEffect, useContext} from "react";
-import firebase from "../../../config/firebase"
-import UserContext from '../../../contexts/UserContext';
+import "./Catalog.css";
+import { CatalogParticle } from "../../components/particle/CatalogParticle";
+import { useState, useEffect } from "react";
+import firebase from "../../config/firebase";
 
-export const Profile = () => {
-  const user = useContext(UserContext);
-  const [listings, setListings] = useState([]);
+export const Catalog = () => {
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     firebase
@@ -25,17 +23,16 @@ export const Profile = () => {
           
         });
         
-        setListings(arr);
+        setProducts(arr);
       });
   }, []);
-  let userListings = listings.filter((x) => x.info.product.creator === user.uid)
 
   return (
-    <section className="profile">
-      <h1>{user.email}'s uploaded listings</h1>
+    <section className="catalog">
+      <h1>All Listings</h1>
       <div className="cars">
-      {userListings.length > 0 ? (
-          userListings.map((product) => {
+        {products.length > 0 ? (
+          products.map((product) => {
 
             return(
               <CatalogParticle

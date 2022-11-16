@@ -1,6 +1,5 @@
 import "./Search.css";
-import "../catalog/particle/CatalogParticle.js";
-import { CatalogParticle } from "../catalog/particle/CatalogParticle.js";
+import { CatalogParticle } from "../../components/particle/CatalogParticle";
 import { useState, useEffect} from "react";
 import firebase from "../../config/firebase"
 

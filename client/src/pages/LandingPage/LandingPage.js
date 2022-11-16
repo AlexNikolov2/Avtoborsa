@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
-import landing from '../../../assets/landing-1.jpg';
+import landing from '../../assets/landing-1.jpg';
 import { Link } from 'react-router-dom';
 
 export const LandingPage = () => {
